@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.contactform.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll1"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main1">
+
+            <TextView
+                android:id="@+id/headerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_form"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/Header_margin"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll2"
+        android:layout_below="@+id/scroll1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/main2">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:id="@+id/layout1"
+                android:layout_toStartOf="@+id/headerLabel"
+                android:layout_below="@+id/headerLabel"
+                android:layout_toLeftOf="@+id/headerLabel">
+
+                <TextView
+                    android:text="Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameLabel"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:text="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailLabel"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:text="Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phoneLabel"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:text="Message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/messageLabel"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:text="Subscribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subscribeLabel"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout2"
+                android:layout_toRightOf="@+id/layout1"
+                android:layout_below="@+id/headerLabel"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editName" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editEmail" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/editPhone" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editMessage" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:id="@+id/subscribe" />
+
+                <Button
+                    android:text="Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submit"
+                    android:onClick="submitEmail"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
